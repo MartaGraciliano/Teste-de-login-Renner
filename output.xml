@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231102 16:24:59.654" rpa="false" schemaversion="4">
+<suite id="s1" name="Renner" source="c:\Users\marta\OneDrive\Área de Trabalho\Renner\renner.robot">
+<test id="s1-t1" name="Efetuar login" line="19">
+<kw name="Dado que o usuário acesse o site">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231102 16:25:00.170" level="INFO">Opening browser 'Chrome' to base url 'https://www.lojasrenner.com.br/'.</msg>
+<status status="PASS" starttime="20231102 16:25:00.169" endtime="20231102 16:25:19.893"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231102 16:25:19.894" endtime="20231102 16:25:20.536"/>
+</kw>
+<kw name="Aceitar Cookie">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cookies_popup}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231102 16:25:20.538" level="INFO">Clicking element 'xpath=//*[@id="__next"]/div/div[1]/div[1]/header/div[1]/div[3]/div/div[1]/label/span'.</msg>
+<status status="PASS" starttime="20231102 16:25:20.537" endtime="20231102 16:25:21.412"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${cookies_popup}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20231102 16:25:21.412" endtime="20231102 16:25:21.428"/>
+</kw>
+<status status="PASS" starttime="20231102 16:25:20.537" endtime="20231102 16:25:21.429"/>
+</kw>
+<status status="PASS" starttime="20231102 16:25:00.167" endtime="20231102 16:25:21.429"/>
+</kw>
+<kw name="Quando ele clica em &quot;Entre ou cadastre-se&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${click_button_Entre}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231102 16:25:21.433" level="INFO">Clicking element 'xpath=//span[contains(text(),'Entre ou cadastre-se')]'.</msg>
+<status status="PASS" starttime="20231102 16:25:21.432" endtime="20231102 16:25:21.509"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${input_email}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231102 16:25:21.509" endtime="20231102 16:25:22.061"/>
+</kw>
+<status status="PASS" starttime="20231102 16:25:21.431" endtime="20231102 16:25:22.061"/>
+</kw>
+<kw name="E preenche o campo email e senha">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_email}</arg>
+<arg>martarochapbi@hotmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231102 16:25:22.064" level="INFO">Typing text 'martarochapbi@hotmail.com' into text field 'xpath=//input[@name='login']'.</msg>
+<status status="PASS" starttime="20231102 16:25:22.063" endtime="20231102 16:25:22.893"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${input_senha}</arg>
+<arg>casa36935882</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231102 16:25:22.898" level="INFO">Typing password into text field 'xpath=//input[@name='password']'.</msg>
+<msg timestamp="20231102 16:25:23.158" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231102 16:25:23.374" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231102 16:25:22.894" endtime="20231102 16:25:23.375"/>
+</kw>
+<status status="PASS" starttime="20231102 16:25:22.062" endtime="20231102 16:25:23.375"/>
+</kw>
+<kw name="E clica no botão entrar">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${click_entrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231102 16:25:23.383" level="INFO">Clicking element 'xpath=//button[normalize-space()='ENTRAR']'.</msg>
+<status status="PASS" starttime="20231102 16:25:23.382" endtime="20231102 16:25:23.574"/>
+</kw>
+<status status="PASS" starttime="20231102 16:25:23.381" endtime="20231102 16:25:23.574"/>
+</kw>
+<status status="PASS" starttime="20231102 16:25:00.166" endtime="20231102 16:25:23.581"/>
+</test>
+<status status="PASS" starttime="20231102 16:24:59.664" endtime="20231102 16:25:23.584"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Renner">Renner</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
